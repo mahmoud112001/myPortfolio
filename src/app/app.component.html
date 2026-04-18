@@ -1,82 +1,41 @@
-<!-- ══ APP COMPONENT TEMPLATE v2 ════════════════════════════════════ -->
-<!-- File: src/app/app.component.html -->
-<!-- Replace your existing app.component.html with this -->
-
-<!-- Skip to content (accessibility) -->
 <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-<!-- ── NAVBAR v2 ─────────────────────────────────────── -->
 <nav class="navbar-v2" [class.scrolled]="isScrolled" role="navigation" aria-label="Main navigation">
   <div class="container navbar-inner">
 
-    <!-- Logo -->
-    <a href="#home" class="nav-logo" (click)="closeMobileMenu()">
+    <a routerLink="/" class="nav-logo" (click)="closeMobileMenu()">
       Mahmoud<span class="dot">.</span>
     </a>
 
-    <!-- Desktop Nav Links -->
     <ul class="nav-links" role="list">
-      <li><a href="#home"     class="nav-link">Home</a></li>
-      <li><a href="#about"    class="nav-link">About</a></li>
-      <li><a href="#skills"   class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact"  class="nav-link">Contact</a></li>
+      <li><a routerLink="/"         class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/about"    class="nav-link" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/skills"   class="nav-link" routerLinkActive="active">Skills</a></li>
+      <li><a routerLink="/projects" class="nav-link" routerLinkActive="active">Projects</a></li>
+      <li><a routerLink="/contact"  class="nav-link" routerLinkActive="active">Contact</a></li>
     </ul>
 
-    <!-- Desktop CTA -->
-    <a href="mailto:mahmoudawad112001@gmail.com"
-       class="nav-cta"
-       aria-label="Email Mahmoud to hire him">
-      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-      Hire Me
+    <a href="mailto:mahmoudawad112001@gmail.com" class="nav-cta">
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i> Hire Me
     </a>
 
-    <!-- Hamburger (mobile only) -->
-    <button
-      class="hamburger"
-      [class.open]="isMobileMenuOpen"
-      (click)="toggleMobileMenu()"
-      [attr.aria-expanded]="isMobileMenuOpen"
-      aria-controls="mobile-menu"
-      aria-label="Toggle navigation menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="hamburger" [class.open]="isMobileMenuOpen" (click)="toggleMobileMenu()">
+      <span></span><span></span><span></span>
     </button>
 
-  </div><!-- /navbar-inner -->
+  </div>
 
-  <!-- Mobile Menu -->
-  <div
-    id="mobile-menu"
-    class="mobile-menu"
-    [class.open]="isMobileMenuOpen"
-    role="menu"
-  >
-    <a href="#home"     class="mobile-link" (click)="closeMobileMenu()" role="menuitem">Home     <i class="fa-solid fa-chevron-right fa-xs" aria-hidden="true"></i></a>
-    <a href="#about"    class="mobile-link" (click)="closeMobileMenu()" role="menuitem">About    <i class="fa-solid fa-chevron-right fa-xs" aria-hidden="true"></i></a>
-    <a href="#skills"   class="mobile-link" (click)="closeMobileMenu()" role="menuitem">Skills   <i class="fa-solid fa-chevron-right fa-xs" aria-hidden="true"></i></a>
-    <a href="#projects" class="mobile-link" (click)="closeMobileMenu()" role="menuitem">Projects <i class="fa-solid fa-chevron-right fa-xs" aria-hidden="true"></i></a>
-    <a href="#contact"  class="mobile-link" (click)="closeMobileMenu()" role="menuitem">Contact  <i class="fa-solid fa-chevron-right fa-xs" aria-hidden="true"></i></a>
-    <a href="mailto:mahmoudawad112001@gmail.com"
-       class="btn-primary mobile-hire"
-       role="menuitem"
-       (click)="closeMobileMenu()">
-      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-      Hire Me
-    </a>
+  <div id="mobile-menu" class="mobile-menu" [class.open]="isMobileMenuOpen" role="menu">
+    <a routerLink="/"         class="mobile-link" (click)="closeMobileMenu()">Home <i class="fa-solid fa-chevron-right fa-xs"></i></a>
+    <a routerLink="/about"    class="mobile-link" (click)="closeMobileMenu()">About <i class="fa-solid fa-chevron-right fa-xs"></i></a>
+    <a routerLink="/skills"   class="mobile-link" (click)="closeMobileMenu()">Skills <i class="fa-solid fa-chevron-right fa-xs"></i></a>
+    <a routerLink="/projects" class="mobile-link" (click)="closeMobileMenu()">Projects <i class="fa-solid fa-chevron-right fa-xs"></i></a>
+    <a routerLink="/contact"  class="mobile-link" (click)="closeMobileMenu()">Contact <i class="fa-solid fa-chevron-right fa-xs"></i></a>
   </div>
 </nav>
 
-<!-- ── MAIN CONTENT ───────────────────────────────────── -->
 <main id="main-content">
-  <app-home></app-home>
-  <app-about-me></app-about-me>
-  <app-myskills></app-myskills>
-  <app-projects></app-projects>
-  <app-contact-me></app-contact-me>
+  <router-outlet></router-outlet>
 </main>
 
-<!-- ── FOOTER ─────────────────────────────────────────── -->
 <app-footer></app-footer>
