@@ -1,0 +1,235 @@
+<!-- ══ PROJECTS SECTION v2 ══════════════════════════════════════════ -->
+<!-- File: src/app/projects/projects.component.html -->
+<!-- 
+  Changes from v1:
+  - Featured project at top (full width)
+  - Screenshot-first approach with placeholder for missing images
+  - Hover overlay shows full description  
+  - Better card structure with color-coded headers
+  - Scroll reveal animations
+-->
+
+<section id="projects" class="section-padding">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <span class="section-tag">// what i built</span>
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      <p class="section-subtitle">
+        Production-ready applications built with modern technologies and real-world architecture.
+      </p>
+      <div class="title-line"></div>
+    </div>
+
+    <!-- ── FEATURED PROJECT ────────────────────────── -->
+    <div class="project-featured reveal">
+
+      <!-- Screenshot / Visual -->
+      <div class="project-screenshot" role="img" aria-label="JS Game Station — interactive web game hub">
+        <!-- Replace with actual screenshot: <img src="assets/screenshots/game-station.webp" alt="JS Game Station screenshot" class="project-screenshot-img" loading="lazy"> -->
+        <div class="screenshot-placeholder">
+          <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+          <span class="font-mono" style="font-size: 0.75rem; letter-spacing: 0.1em;">LIVE DEMO AVAILABLE</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="project-content">
+        <span class="project-badge">⭐ Featured Project</span>
+        <h3 class="project-title-v2">JS Game Station</h3>
+        <p class="project-desc">
+          An integrated web gaming hub featuring 4 interactive games: Hangman, Tic-Tac-Toe (TypeScript + SOLID),
+          Memory Matrix, and a landing page with IntersectionObserver reveals and SOLID Design Principles guide.
+          Deployed to GitHub Pages with full accessibility and responsive design.
+        </p>
+
+        <div class="project-tech-stack" style="margin-bottom: 1.5rem;">
+          <span class="tech-chip">JavaScript ES6+</span>
+          <span class="tech-chip">TypeScript</span>
+          <span class="tech-chip">SOLID Principles</span>
+          <span class="tech-chip">Design Patterns</span>
+          <span class="tech-chip">Chart.js</span>
+          <span class="tech-chip">CSS3</span>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://mahmoud112001.github.io/JS-Game-Station/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-primary"
+             aria-label="View JS Game Station live demo">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            Live Demo
+          </a>
+          <a href="https://github.com/mahmoud112001/JS-Game-Station"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-outline"
+             aria-label="View JS Game Station source code on GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            Source Code
+          </a>
+        </div>
+      </div><!-- /project-content -->
+
+    </div><!-- /project-featured -->
+
+    <!-- ── PROJECT CARDS GRID ──────────────────────── -->
+    <div class="projects-grid">
+
+      <!-- Graduation Project -->
+      <article class="project-card-v2 reveal" aria-labelledby="project-grad-title">
+        <div class="project-card-header-v2 color-purple">
+          <i class="fa-solid fa-microchip fa-2x" aria-hidden="true"
+             style="color: #c084fc;"></i>
+          <span class="project-badge" style="margin: 0;">Capstone — A+</span>
+        </div>
+        <div class="project-card-body-v2">
+          <h3 class="project-card-title" id="project-grad-title">
+            Smart City Healthcare System
+          </h3>
+          <p class="project-card-desc">
+            Secure IoT-based healthcare monitoring with cloud infrastructure.
+            Real-time data collection, alert mechanisms, and IoT-cloud security.
+            Earned the highest grade in class.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-chip">IoT</span>
+            <span class="tech-chip">Cloud</span>
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Security</span>
+          </div>
+        </div>
+        <div class="project-card-footer-v2">
+          <span class="project-badge" style="font-size: 0.68rem; padding: 0.15rem 0.7rem;">
+            AAST University 2024
+          </span>
+          <span class="grade-badge-v2">
+            <i class="fa-solid fa-star" aria-hidden="true"></i> Grade: A+
+          </span>
+        </div>
+      </article>
+
+      <!-- Angular Portfolio -->
+      <article class="project-card-v2 reveal reveal-delay-1" aria-labelledby="project-angular-title">
+        <div class="project-card-header-v2 color-angular">
+          <i class="fa-brands fa-angular fa-2x" aria-hidden="true"
+             style="color: #dd0031;"></i>
+          <span class="project-badge" style="margin: 0;">Angular</span>
+        </div>
+        <div class="project-card-body-v2">
+          <h3 class="project-card-title" id="project-angular-title">
+            Angular Portfolio SPA
+          </h3>
+          <p class="project-card-desc">
+            This portfolio — built with Angular 16, TypeScript, Bootstrap 5,
+            and Font Awesome 7. Deployed to GitHub Pages with a custom domain.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-chip">Angular 16</span>
+            <span class="tech-chip">TypeScript</span>
+            <span class="tech-chip">Bootstrap 5</span>
+            <span class="tech-chip">SCSS</span>
+          </div>
+        </div>
+        <div class="project-card-footer-v2">
+          <a href="https://mahmoud112001.github.io/Angular_course"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="project-link"
+             aria-label="View Angular Portfolio live site">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>Live
+          </a>
+          <a href="https://github.com/mahmoud112001/Angular_course"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="project-link"
+             aria-label="View Angular Portfolio on GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>Repo
+          </a>
+        </div>
+      </article>
+
+      <!-- React Todo -->
+      <article class="project-card-v2 reveal reveal-delay-2" aria-labelledby="project-react-title">
+        <div class="project-card-header-v2 color-blue">
+          <i class="fa-brands fa-react fa-2x" aria-hidden="true"
+             style="color: #60a5fa;"></i>
+          <span class="project-badge" style="margin: 0;">React 19</span>
+        </div>
+        <div class="project-card-body-v2">
+          <h3 class="project-card-title" id="project-react-title">
+            React Todo App
+          </h3>
+          <p class="project-card-desc">
+            Full auth flow with Formik validation, Yup schemas, protected routes,
+            Context API for state, and Tailwind CSS v4. Built for ITI Day 02 assignment.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-chip">React 19</span>
+            <span class="tech-chip">React Router v7</span>
+            <span class="tech-chip">Formik</span>
+            <span class="tech-chip">Tailwind v4</span>
+          </div>
+        </div>
+        <div class="project-card-footer-v2">
+          <a href="https://github.com/mahmoud112001"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="project-link"
+             aria-label="View React Todo App on GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- CRUD App -->
+      <article class="project-card-v2 reveal reveal-delay-3" aria-labelledby="project-crud-title">
+        <div class="project-card-header-v2 color-green">
+          <i class="fa-solid fa-database fa-2x" aria-hidden="true"
+             style="color: #4ade80;"></i>
+          <span class="project-badge" style="margin: 0;">Full-Stack</span>
+        </div>
+        <div class="project-card-body-v2">
+          <h3 class="project-card-title" id="project-crud-title">
+            CRUD Application
+          </h3>
+          <p class="project-card-desc">
+            Full-stack CRUD app with complete Create, Read, Update, Delete operations.
+            Clean RESTful API architecture with database management and validation.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">Express.js</span>
+            <span class="tech-chip">MongoDB</span>
+            <span class="tech-chip">REST API</span>
+          </div>
+        </div>
+        <div class="project-card-footer-v2">
+          <a href="https://github.com/mahmoud112001/CRUD"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="project-link"
+             aria-label="View CRUD Application on GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>View Repo
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /projects-grid -->
+
+    <!-- GitHub CTA -->
+    <div class="reveal" style="text-align: center; margin-top: 3rem;">
+      <a href="https://github.com/mahmoud112001"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn-outline"
+         aria-label="View all projects on GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+        View All on GitHub
+      </a>
+    </div>
+
+  </div><!-- /container -->
+</section>
