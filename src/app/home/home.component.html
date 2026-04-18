@@ -1,0 +1,147 @@
+<!-- ══ HERO / HOME SECTION v2 ══════════════════════════════════════ -->
+<!-- File: src/app/home/home.component.html -->
+<!-- 
+  Changes from v1:
+  - Status badge with animated green dot
+  - Animated hero name with proper sizing
+  - Typewriter role text (handled in home.component.ts)
+  - Tech stack pills instead of badges
+  - Single primary CTA + secondary outline
+  - Floating photo with rotating ring
+  - Scroll indicator
+  - Removed phone number from public view
+-->
+
+<section id="home" class="hero-v2">
+
+  <div class="container hero-inner">
+
+    <!-- ── Left: Text Content ─────────────────────────── -->
+    <div class="hero-text">
+
+      <!-- Status Badge -->
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Open to Full-Stack Roles — Remote / UAE / Europe
+      </div>
+
+      <!-- Name -->
+      <h1 class="hero-name">
+        Mahmoud<br>
+        <span class="accent">Awad</span>
+      </h1>
+
+      <!-- Typewriter role -->
+      <div class="hero-role-wrapper" aria-label="Role: Full-Stack Developer">
+        <span class="role-prefix font-mono">//</span>
+        <span class="typewriter-text font-mono" id="typewriter-text">Full-Stack Developer</span>
+        <span class="cursor" aria-hidden="true"></span>
+      </div>
+
+      <!-- Description -->
+      <p class="hero-desc">
+        Computer Engineering graduate building AI-powered web apps with the MEARN stack.
+        Currently advancing through ITI's intensive program in Alexandria, Egypt.
+      </p>
+
+      <!-- Tech stack pills -->
+      <div class="tech-pills" role="list" aria-label="Technology stack">
+        <span class="tech-pill" role="listitem">
+          <i class="fa-brands fa-react" aria-hidden="true"></i>React
+        </span>
+        <span class="tech-pill" role="listitem">
+          <i class="fa-brands fa-angular" aria-hidden="true"></i>Angular
+        </span>
+        <span class="tech-pill" role="listitem">
+          <i class="fa-brands fa-node-js" aria-hidden="true"></i>Node.js
+        </span>
+        <span class="tech-pill" role="listitem">
+          <i class="fa-solid fa-database" aria-hidden="true"></i>MongoDB
+        </span>
+        <span class="tech-pill" role="listitem">
+          <i class="fa-solid fa-robot" aria-hidden="true"></i>OpenAI API
+        </span>
+        <span class="tech-pill" role="listitem">
+          <i class="fa-brands fa-git-alt" aria-hidden="true"></i>Git
+        </span>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary" role="button">
+          <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+          View My Work
+        </a>
+        <a href="assets/Mahmoud_Awad_CV.pdf" download class="btn-outline" role="button">
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          Download CV
+        </a>
+      </div>
+
+      <!-- Social links -->
+      <div class="hero-socials" role="list" aria-label="Social media links">
+        <a href="https://github.com/mahmoud112001"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-link"
+           role="listitem"
+           aria-label="Follow on GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mahmoud-awad-795b02203/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-link"
+           role="listitem"
+           aria-label="Connect on LinkedIn">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:mahmoudawad112001@gmail.com"
+           class="social-link"
+           role="listitem"
+           aria-label="Send an email">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div><!-- /hero-text -->
+
+    <!-- ── Right: Image ───────────────────────────────── -->
+    <div class="hero-image-col">
+      <div class="hero-photo-wrap" role="img" aria-label="Mahmoud Awad profile photo">
+        <img
+          src="assets/mahmoud.png"
+          alt="Mahmoud Awad — Full-Stack Developer based in Alexandria, Egypt"
+          class="hero-photo"
+          width="260"
+          height="260"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Quick stats cards -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-number">4+</span>
+          <span class="stat-label">Projects Live</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">A+</span>
+          <span class="stat-label">Capstone Grade</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Connections</span>
+        </div>
+      </div>
+    </div><!-- /hero-image-col -->
+
+  </div><!-- /hero-inner -->
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+
+</section>
