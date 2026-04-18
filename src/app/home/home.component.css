@@ -1,0 +1,73 @@
+/* ══ HOME COMPONENT STYLES v2 ══════════════════════════════════════ */
+/* File: src/app/home/home.component.css */
+
+/* Stats cards below the photo */
+.hero-stats {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  min-width: 80px;
+  transition:
+    border-color 250ms ease,
+    transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stat-card:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-3px);
+}
+
+.stat-number {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Mobile hero adjustments */
+@media (max-width: 991px) {
+  .hero-image-col {
+    order: -1; /* Photo appears first on mobile — keep if desired */
+  }
+
+  .hero-photo-wrap {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-photo-wrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-stats {
+    gap: 0.5rem;
+  }
+
+  .stat-card {
+    padding: 0.6rem 1rem;
+  }
+}
