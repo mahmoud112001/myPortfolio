@@ -1,0 +1,221 @@
+<!-- ══ CONTACT SECTION v2 ════════════════════════════════════════════ -->
+<!-- File: src/app/contact-me/contact-me.component.html -->
+<!--
+  Changes from v1:
+  - Working Formspree integration (replace YOUR_FORM_ID)
+  - Phone number REMOVED from public HTML
+  - Split layout: info left, form right
+  - Angular event handling for form feedback
+  - Scroll reveal animations
+  - Better accessibility: labels connected to inputs via for/id
+  
+  SETUP: 
+  1. Go to https://formspree.io
+  2. Create a free account
+  3. Create a form and get your Form ID
+  4. Replace 'YOUR_FORM_ID' below with your actual ID
+  5. Verify your email address in Formspree
+-->
+
+<section id="contact" class="section-padding section-dark">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <span class="section-tag">// get in touch</span>
+      <h2 class="section-title">Let's <span class="accent">Talk</span></h2>
+      <p class="section-subtitle">
+        Open to full-stack developer roles, freelance projects, and interesting collaborations.
+      </p>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- ── Left: Info ─────────────────────────────── -->
+      <div class="contact-info-v2 reveal">
+
+        <div>
+          <h3 class="contact-heading">
+            Ready to build<br>something <span class="accent">great?</span>
+          </h3>
+          <p class="contact-subtext">
+            I'm actively looking for full-stack developer positions — remote, hybrid, or
+            relocating to UAE / Saudi / Europe. Drop me a message and I'll reply within 24 hours.
+          </p>
+        </div>
+
+        <!-- Email -->
+        <a href="mailto:mahmoudawad112001@gmail.com"
+           class="contact-item"
+           aria-label="Email Mahmoud">
+          <div class="contact-icon-v2" aria-hidden="true">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <p class="contact-detail-label">Email</p>
+            <p class="contact-detail-value">mahmoudawad112001&#64;gmail.com</p>
+          </div>
+        </a>
+
+        <!-- Location -->
+        <div class="contact-item">
+          <div class="contact-icon-v2" aria-hidden="true">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <p class="contact-detail-label">Location</p>
+            <p class="contact-detail-value">Alexandria, Egypt 🇪🇬</p>
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="contact-item">
+          <div class="contact-icon-v2" aria-hidden="true" style="background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: var(--success);">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div>
+            <p class="contact-detail-label">Status</p>
+            <p class="contact-detail-value" style="color: var(--success);">Available from July 2026</p>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="contact-socials-v2" role="list" aria-label="Professional profiles">
+          <a href="https://github.com/mahmoud112001"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="contact-social-link"
+             role="listitem"
+             aria-label="GitHub profile">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mahmoud-awad-795b02203/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="contact-social-link"
+             role="listitem"
+             aria-label="LinkedIn profile">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:mahmoudawad112001@gmail.com"
+             class="contact-social-link"
+             role="listitem"
+             aria-label="Send email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div><!-- /contact-info-v2 -->
+
+      <!-- ── Right: Form ────────────────────────────── -->
+      <div class="contact-form-v2 reveal reveal-delay-2">
+
+        <!-- Success state -->
+        <div *ngIf="formSuccess" class="form-success-msg" role="alert">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"
+             style="color: var(--success); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+          <p style="font-weight: 700; margin-bottom: 0.25rem;">Message sent! 🎉</p>
+          <p style="color: var(--text-secondary); font-size: 0.875rem;">
+            I'll get back to you within 24 hours.
+          </p>
+        </div>
+
+        <!-- Contact form — posts to Formspree -->
+        <form
+          *ngIf="!formSuccess"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          (submit)="onFormSubmit($event)"
+          novalidate
+          aria-label="Contact form"
+        >
+          <!-- Hidden: redirect back to same page -->
+          <input type="hidden" name="_subject" value="Portfolio Contact — Mahmoud Awad">
+          <input type="hidden" name="_next" value="https://mahmoud112001.github.io/Angular_course/first_angular_project/#contact">
+
+          <!-- Name + Email row -->
+          <div class="form-row">
+            <div class="form-group-v2">
+              <label class="form-label-v2" for="contact-name">Full Name *</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                class="form-control-v2"
+                placeholder="Your full name"
+                required
+                autocomplete="name"
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group-v2">
+              <label class="form-label-v2" for="contact-email">Email Address *</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                class="form-control-v2"
+                placeholder="your@company.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+              />
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div class="form-group-v2">
+            <label class="form-label-v2" for="contact-company">Company / Role</label>
+            <input
+              type="text"
+              id="contact-company"
+              name="company"
+              class="form-control-v2"
+              placeholder="Where are you reaching out from? (optional)"
+              autocomplete="organization"
+            />
+          </div>
+
+          <!-- Message -->
+          <div class="form-group-v2">
+            <label class="form-label-v2" for="contact-message">Message *</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              class="form-control-v2"
+              rows="5"
+              placeholder="Tell me about the role, project, or opportunity..."
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="btn-primary btn-submit"
+            [disabled]="isSubmitting"
+            [attr.aria-busy]="isSubmitting"
+          >
+            <i class="fa-solid"
+               [class.fa-paper-plane]="!isSubmitting"
+               [class.fa-spinner]="isSubmitting"
+               [class.fa-spin]="isSubmitting"
+               aria-hidden="true">
+            </i>
+            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+          </button>
+
+          <p class="font-mono" style="font-size: 0.7rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+            Your data is safe. No spam, ever.
+          </p>
+
+        </form>
+
+      </div><!-- /contact-form-v2 -->
+
+    </div><!-- /contact-grid -->
+
+  </div><!-- /container -->
+</section>
